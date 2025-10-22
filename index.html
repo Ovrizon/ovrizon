@@ -8,11 +8,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 <body>
     <div class="container">
       <div class="page-1">
-        
+       
   <div class="content">
     <header>
     <nav class="navbar">
@@ -21,27 +23,32 @@
   <div class="hamburger" onclick="toggleMenu()">☰</div>
       <!-- Navigation Links -->
       <div class="nav-links">
-        <a href="#aboutus">ABOUT</a>
-        <a href="#service">SERVICES</a>
+
+        <a href="about.html">ABOUT</a>
+        <a href="service.html">SERVICES</a>
         <a href="#work">OUR WORK</a>
-        <a href="#contact">CONTACT</a>
+        <a href="contact.html">CONTACT</a>
       </div>
     </nav>
   </header>
+    <div id="particles-js"></div>
   <div class="sections">
+   
   <div class="heading">
      <h1><span class="white">O</span><span class="yellow">VRIZON</span></h1>  
      <h3>Empowering Businesses with Smarter Digital Solutions</h3>
   
-     <p>From cloud to AI, we simplify technology so you can focus on growth.</p>
+     <p>From cloud infrastructure to AI solutions, we deliver technology that transforms.<br>
+Simplify your operations, scale efficiently, and stay ahead of the future.</p>
      </div>
      <div class="image">
         <img src="img/pexels-pavel-danilyuk-5520320.jpg" alt="">
      </div>
+     
      </div>
   </div>
       </div>
-    <div class="page-2" id="aboutus">
+    <!-- <div class="page-2" id="aboutus">
       <div class="about" >
         <h1>About <span class="white">O</span><span class="yellow">VRIZON</span></h1>
         <p>
@@ -52,10 +59,11 @@ From custom web development to scalable cloud services,<br> AI-powered products,
        <h2>Who We Are</h2>
        <p>We are a team of passionate developers, cloud architects, AI engineers, and digital consultants who thrive on solving complex business challenges with simple yet effective solutions. Our expertise spans across multiple domains, giving us the ability to craft tailored solutions that align with your goals.</p>
       </div>
-    </div>
+    </div> -->
     <div class="page-3" id="service">
   <div class="services">
     <h1>Our <span class="white">S</span><span class="yellow">ervices</span></h1>
+ <h2 class="headline-title">Transforming Technology Into Business Growth</h2>
     <div class="services-grid">
 
       <!-- Card 1 -->
@@ -130,33 +138,129 @@ From custom web development to scalable cloud services,<br> AI-powered products,
   </div>
 </div>
 
-    <div class="page-5" id="contact">
-        <footer>
-    <div class="footer-content">
-      <h2>Contact Us</h2>
+
+<div class="faq">
+<section class="faq-container">
+    <div class="faq-left">
+      <p style="color:#ddff00; font-weight:700; font-size: 30px;">• GOT QUESTIONS?</p>
+  
+    
       <p>
-        Ovrizon which empowering businesses with smart and reliable IT solution for growth.
+        Explore some of the most frequently asked questions by our clients
+        about our services, pricing, support, and process.
       </p>
+     
+    </div>
 
-      <div class="footer-contact">
-        <a href="mailto:contact@ovrizon.com">
-          <img src="img/mail.png" alt="email"> 
-          contact@ovrizon.com
-        </a>
-        <a href="tel:+919304203174">
-            <img src="img/telephone.png" alt="Phone">
-          +919304203174
-        </a>
+    <div class="faq-right">
+      <div class="faq-item">
+        <div class="faq-question">
+          How long does it take to build a website?
+          <span>+</span>
+        </div>
+        <div class="faq-answer">
+          The timeline depends on the complexity of your website. A basic site can take 1–2 weeks, while a custom website may take 3–5 weeks.
+        </div>
       </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          Do you offer SEO with web development?
+          <span>+</span>
+        </div>
+        <div class="faq-answer">
+          Yes, we include on-page SEO setup in our web development packages to ensure your site performs well in search engines.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          Can your e-commerce solutions handle high traffic and product inventory scaling?
+          <span>+</span>
+        </div>
+        <div class="faq-answer">
+          Absolutely! Our e-commerce systems are designed to handle scaling efficiently and maintain performance even with high traffic.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          Is your hosting service secure and reliable?
+          <span>+</span>
+        </div>
+        <div class="faq-answer">
+          Yes, our hosting is fully secure with SSL, daily backups, and 99.9% uptime reliability.
+        </div>
+      </div>
+
+    
+    </div>
+  </section>
+   </div>
+
+  <div class="cta-card">
+  <h2>Your Partner in Scalable IT & Cloud Innovation</h2>
+  <p>
+   Partner with Ovrizon for dependable cloud solutions, advanced development, and round-the-clock technical support designed for your success.
+  </p>
+  <a href="contact.html" class="cta-btn">Get Started</a>
+</div>
+
+   
+
+
+    <footer class="site-footer">
+       
+    <div class="footer-container">
+     
+        <div class="footer-column company-info">
+           
+            <div class="logo">
+                <span class="logo-text">Ovrizon</span>
+            </div>
+            <p>
+                Empowering your digital journey with robust cloud infrastructure, 
+                DevOps expertise, and tailored IT solutions for modern businesses.
+            </p>
+            <div class="contact-details">
+                <p>
+                  
+                    <a href="tel:+918810939967" class="contact-link"> <img src="img/phone-call.png" alt="Phone"> +91 8810939967</a>
+                </p>
+                <p>
+                 
+                    <a href="mailto:contact@ovrizon.com" class="contact-link">   <img src="img/letter.png" alt="Phone">  contact@ovrizon.com</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-column quick-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column ">
+            <h4>Services</h4>
+            <ul>
+                <li><a href="#">Cloud Hosting</a></li>
+                <li><a href="#">Website Development</a></li>
+                 <li><a href="#">Saas Solution</a></li>
+                <li><a href="#">Consultancy</a></li>
+               
+                
+            </ul>
+        </div>
     </div>
 
-    <div class="footer-bottom">
-      © 2025 Ovrizon. This page is protected by reCAPTCHA and is subject to the Google 
-      <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a>.
+    <div class="copyright-bar">
+        <p>Copyrights &copy; 2025 Ovrizon. All Rights Reserved.</p>
     </div>
-  </footer>
-
-    </div>
+</footer>
     </div>
     <script src="script.js"></script>
 </body>

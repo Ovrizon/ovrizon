@@ -1,0 +1,177 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+**/
+body {
+   font-family: Arial, sans-serif;
+  background-color: #131212;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+
+
+
+/* Alternate containers: image right, text left */
+.service-container.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Heading */
+.services-section {
+  padding: 120px 10%;
+  text-align: center;
+}
+
+.services-heading {
+  font-size: 2.5rem;
+  color: #ddff00;
+  margin-bottom: 15px;
+}
+
+.services-subtext {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  color: #ccc;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Container */
+.service-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  max-width: 1100px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
+}
+
+.service-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+  margin-bottom: 6%;
+}
+
+/* Image Animation */
+.service-image {
+    width: 50vw;
+    height: 40vh;
+  flex: 1;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(221, 255, 0, 0.3);
+}
+
+.service-image img {
+   
+  width: 100%;
+  transform: scale(0.6);
+  opacity: 0;
+  transition: all 1.2s ease;
+}
+
+.service-image.visible img {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Text Animation */
+.service-text {
+  flex: 1;
+  text-align: left;
+  transform: translateX(80px);
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.service-text.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.service-text h2 {
+  color: #ddff00;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.service-text p {
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.service-text ul {
+  list-style: none;
+}
+
+.service-text ul li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.service-text ul li::before {
+  content: "✔";
+  color: #ddff00;
+  position: absolute;
+  left: 0;
+}
+
+/* =================================
+Media Queries for Responsiveness
+================================= */
+
+/* --- Tablet and Mobile Layout (Max-width: 900px) --- */
+@media (max-width: 900px) {
+.services-section {
+padding: 80px 5%; /* Reduce padding on smaller screens */
+}
+
+.services-heading {
+font-size: 2rem;
+}
+
+/* Stacks image and text vertically */
+.service-container,
+.service-container.reverse {
+flex-direction: column;
+gap: 30px; /* Reduced gap for vertical stacking */
+text-align: center;
+margin-bottom: 50px;
+}
+
+/* Ensures text is centered/left-aligned appropriately on smaller screens */
+.service-text {
+ text-align: left; /* Keep text left-aligned for readability */
+width: 100%;
+}
+.service-text.visible {
+/* Update visibility for mobile stacking */
+transform: translateY(0); /* Remove the horizontal slide animation for mobile */
+ opacity: 1;
+}
+
+/* Adjust image size for full width on smaller screens */
+.service-image {
+width: 100%;
+height: auto; /* Allow image height to be automatic */
+max-height: 400px;
+}
+
+.service-image img {
+/* Ensure the image fills the container */
+height: 100%;
+object-fit: cover;
+}
+
+.service-text ul {
+padding-left: 20px; /* Add some padding back for the list */
+}
+}

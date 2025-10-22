@@ -10,18 +10,24 @@ body {
     }
 
     
-    .navbar {
-         font-family: "Montserrat", sans-serif;
-      display: flex;
-      width: 100vw;
-      align-items: center;
-      justify-content: space-between;
-      background-color: #000; /* Black background */
-      padding: 10px 60px 10px 60px;
-      position: fixed;
-      top: 0;
-      z-index: 1000;
-    }
+ .navbar {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  padding: 10px 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999; /* Increased z-index so nothing overlaps */
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.6);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+
  
     /* Logo Styling */
     .navbar img {
@@ -56,21 +62,18 @@ body {
 }
 
     .content{
+      z-index: 10;
          font-family: "Montserrat", sans-serif;
         background-color: rgb(27, 26, 26);
-        /* background-image: ; */
         width: 100%;
         min-height: 100vh;
         display: flex;
         flex-direction: column;
-        /* justify-content: center;
-        align-items: center; */
         color: white;
     }
     .heading{
        flex-direction: column; 
        font-size: 30px;
-       /* overflow: hidden; */
        justify-content: center;
        flex: 1;
   display: flex;
@@ -87,6 +90,7 @@ body {
       color: #ddff00;
 }
     .heading h1{
+      z-index: 10;
         padding-top: 15%;
        padding-left: 25%; 
         font-size: 60px;
@@ -102,88 +106,26 @@ body {
   to { width: 9ch; }  
 }
 .heading h3 {
+    z-index: 10;
  padding-left: 80px; 
 margin-top: -1%;
 }
 .heading p {
- padding-left: 80px; 
+  margin-top: -1%;
+    z-index: 10;
+ padding-left: 80px;
+ font-weight: 300; 
 }
 @keyframes blink {
   50% { border-color: transparent; }
 }
-    
-    footer {
-      background-color:black;
-      padding: 40px 60px 20px;
-      color: #ddff00;
-    }
 
-    .footer-content {
-         font-family: "Montserrat", sans-serif;
-      max-width: 1000px;
-      margin: auto;
-      
-    }
-
-    .footer-content h2 {
-      margin: 0 0 10px;
-      font-size: 34px;
-      
-    }
-
-    .footer-content p {
-      font-size: 23px;
-      margin: 10px 0 20px;
-      color: #ccc;
-      line-height: 1.6;
-    }
-
-    .footer-contact {
-      margin: 15px 0;
-    }
-
-    .footer-contact a {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      color: white;
-      margin-bottom: 10px;
-      font-size: 16px;
-      transition: color 0.3s;
-    }
-
-    .footer-contact a:hover {
-      color: #ddff00;
-    }
-
-    .footer-contact img {
-      width: 22px;
-      margin-right: 10px;
-    }
-
-    .footer-bottom {
-      border-top: 1px solid #333;
-      margin-top: 20px;
-      padding-top: 15px;
-      text-align: center;
-      font-size: 14px;
-      color: #aaa;
-    }
-
-    .footer-bottom a {
-      color: #00d1d1;
-      text-decoration: none;
-    }
-
-    .footer-bottom a:hover {
-      text-decoration: underline;
-    }
     .section{
         display: flex;
     }
    
     .image img{
-        /* border-radius: 50%; */
+    pointer-events: none !important;
         width: 800px;
         height: 800px;
         object-fit: cover;
@@ -192,17 +134,18 @@ margin-top: -1%;
         border-bottom-left-radius: 30%;
     }
     .image  {
+      pointer-events: none;
   position: absolute;
   top: 20%; 
   left: 43%;
-  /* transform: translate(-50%, -50%); */
+  z-index: 0;
   text-align: center;
   opacity: 0.3;
   padding: 20px;
   
 }
 
-.about{
+/* .about{
 font-family: "Montserrat", sans-serif;
       background-color: rgb(27, 26, 26);
       padding-left: 20px;
@@ -223,7 +166,7 @@ font-family: "Montserrat", sans-serif;
     color: white;
     font-size: 35px;
     
-}
+} */
 
 
 .services {
@@ -240,6 +183,7 @@ font-family: "Montserrat", sans-serif;
 }
 
 .services-grid {
+ 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
@@ -248,6 +192,7 @@ font-family: "Montserrat", sans-serif;
 }
 
 .service-card {
+  
   background: #111;
   border-radius: 15px;
   overflow: hidden;
@@ -298,7 +243,9 @@ font-family: "Montserrat", sans-serif;
   overflow: hidden;
   box-shadow: 0px 5px 15px rgba(0,0,0,0.5);
   transition: transform 0.4s ease;
-  background: #111;
+  background:  #ddff00;
+ 
+ 
 }
 
 .work-card a {
@@ -323,13 +270,13 @@ font-family: "Montserrat", sans-serif;
 .work-card h3 {
   margin: 15px 0;
   font-size: 22px;
-  color: #ffffff;
+  color: #000000;
   font-weight: bold;
   text-align: center;
   font-family: "Montserrat", sans-serif;
 }
 .our-work h1{
-  margin-top: 0;
+  margin-top: 50px;
   margin-bottom: 40px;
    color: white;
   font-family: "Montserrat", sans-serif;
@@ -406,7 +353,7 @@ font-family: "Montserrat", sans-serif;
 }
 
 /* ✅ About Section */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .about h1 {
     font-size: 36px;
     text-align: center;
@@ -421,7 +368,7 @@ font-family: "Montserrat", sans-serif;
     font-size: 28px;
     text-align: center;
   }
-}
+} */
 
 /* ✅ Services Grid Responsive */
 @media (max-width: 992px) {
@@ -472,3 +419,396 @@ font-family: "Montserrat", sans-serif;
     justify-content: center;
   }
 }
+
+
+.faq{
+   font-family: Arial, sans-serif;
+ background-color: rgb(27, 26, 26);
+}
+
+ .faq-container {
+      max-width: 1100px;
+     
+      padding: 58px 200px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      
+    }
+
+    .faq-left {
+      flex: 1 1 40%;
+      
+    }
+
+    .faq-left h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      color: #ddff00;
+    }
+
+    .faq-left p {
+      font-size: 1rem;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    
+
+    .faq-right {
+      flex: 1 1 55%;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .faq-item {
+      background: #f9fafb;
+      border-radius: 12px;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    .faq-item.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .faq-question {
+      padding: 20px;
+      background: #fff;
+      font-weight: 600;
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid #e0e0e0;
+      border-radius: 12px;
+      transition: all 0.3s;
+    }
+
+    .faq-question:hover {
+      background: #f4f6ff;
+    }
+
+    .faq-question span {
+      font-size: 1.5rem;
+      color: #333;
+      transition: transform 0.3s;
+    }
+
+    .faq-question.active span {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      background: #f0f3ff;
+      color: #333;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      padding: 0 20px;
+      border-left: 3px solid #ddff00;
+      transition: all 0.5s ease;
+    }
+
+    .faq-answer.open {
+      padding: 15px 20px;
+      max-height: 200px;
+    }
+@media (max-width: 1024px) {
+  .faq-container {
+    padding: 50px 80px;
+  }
+
+  .faq-left {
+    flex: 1 1 100%;
+    margin-bottom: 40px;
+  }
+
+  .faq-left p:first-child {
+    font-size: 1.8rem;
+  }
+
+  .faq-left p {
+    font-size: 1rem;
+  }
+
+  .faq-question {
+    font-size: 1rem;
+    padding: 18px;
+  }
+}
+
+/* For Mobile Devices */
+@media (max-width: 768px) {
+  .faq-container {
+    flex-direction: column;
+    padding: 40px 30px;
+  }
+
+  .faq-left, .faq-right {
+    flex: 1 1 100%;
+  }
+
+  .faq-left p:first-child {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .faq-left p {
+    text-align: center;
+    font-size: 0.95rem;
+  }
+
+  .faq-question {
+    font-size: 1rem;
+    padding: 16px;
+  }
+
+  .faq-answer {
+    font-size: 0.9rem;
+  }
+}
+
+/* For Small Phones */
+@media (max-width: 480px) {
+  .faq-container {
+    padding: 30px 20px;
+  }
+
+  .faq-left p:first-child {
+    font-size: 1.4rem;
+  }
+
+  .faq-left p {
+    font-size: 0.9rem;
+  }
+
+  .faq-question {
+    font-size: 0.95rem;
+    padding: 14px;
+  }
+
+  .faq-question span {
+    font-size: 1.3rem;
+  }
+}
+
+
+
+
+/* ✅ Modern Gradient Background for all dark sections */
+ .content,  .services, .our-work, .faq {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 40%, #000000 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* .content > *, .about > *, .services > *, .our-work > *, .faq > * {
+  position: relative;
+  z-index: 1;
+  
+}  */
+
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(221, 255, 0, 0.4);
+  background: linear-gradient(145deg, #0c0c0c, #1a1a1a);
+}
+.heading h1,  .services h1, .our-work h1 {
+  text-shadow: 0 0 15px rgba(221, 255, 0, 0.6);
+}
+
+
+
+
+#particles-js {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  background: linear-gradient(135deg, #000000, #000000);
+}
+
+.headline-title {
+  font-size: 25px;
+  font-weight: 400;
+  margin-bottom: 60px;
+  color: #ffffff;
+ margin-top: -30px;
+}
+
+/* CTA Card Section */
+.cta-card {
+  background: #ddff00;
+  color: #000;
+  text-align: center;
+  padding: 60px 30px;
+  border-radius: 25px;
+  max-width: 1000px;
+  margin: 80px auto;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  font-family: "Montserrat", sans-serif;
+}
+
+.cta-card h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.cta-card p {
+  font-size: 16px;
+  color: #222;
+  margin-bottom: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.cta-btn {
+  display: inline-block;
+  background: #000;
+  color: #ddff00;
+  padding: 12px 35px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #333;
+  transform: translateY(-3px);
+}
+
+
+
+
+
+/* --- Variables for easy color change --- */
+:root {
+    --footer-bg: #000000; /* Pure Black Background */
+    --text-color: #ddff00; /* Pure Yellow Text */
+    --link-hover-color: #ddff00; /* A slightly different yellow for hover effect */
+    --padding-sides: 5%;
+}
+
+.site-footer {
+    background-color: var(--footer-bg);
+    color: var(--text-color);
+    font-family: Arial, sans-serif; /* Use your website's font */
+    padding-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows columns to stack on smaller screens */
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 0 var(--padding-sides) 40px; /* Side padding and bottom padding */
+    gap: 30px; /* Space between columns */
+}
+
+.footer-column {
+    flex: 1 1 300px; /* Allows columns to grow/shrink, minimum width 300px */
+}
+
+/* --- Typography and Links --- */
+.site-footer h4 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: var(--text-color); /* Ensures headings are yellow */
+}
+
+.site-footer p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.site-footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.site-footer ul li {
+    margin-bottom: 10px;
+}
+
+.site-footer a {
+    color: var(--text-color); /* All links are yellow */
+    text-decoration: none; /* Removes underline */
+    transition: color 0.3s ease;
+}
+
+.site-footer a:hover {
+    color: var(--link-hover-color); /* Changes color on hover */
+    text-decoration: underline;
+}
+
+/* --- Company Info Specifics --- */
+.logo-text {
+    font-size: 1.5em;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.contact-link {
+    /* Style for the clickable email and phone number */
+    display: inline-block;
+    margin-top: 5px;
+}
+
+/* --- Copyright Bar --- */
+.copyright-bar {
+    background-color: #000000; /* Can use a slightly darker or same black */
+    padding: 15px var(--padding-sides);
+    border-top: 1px solid #333; /* A subtle separator line */
+    text-align: center;
+}
+
+.copyright-bar p {
+    font-size: 0.9em;
+    margin: 0;
+}
+
+/* --- Responsive Adjustments (for smaller screens) --- */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stack columns vertically */
+        padding-bottom: 20px;
+    }
+
+    .footer-column {
+        margin-bottom: 20px;
+    }
+
+    .footer-column.company-info {
+
+        order: -1; /* Keep company info at the top */
+    }
+}
+
+.site-footer a img{
+  width: 25px;
+  height: 25px;
+}
+
+
+
+
