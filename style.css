@@ -723,7 +723,7 @@ font-family: "Montserrat", sans-serif;
 }
 
 .footer-column {
-    flex: 1 1 300px; /* Allows columns to grow/shrink, minimum width 300px */
+    flex: -1 1 300px; /* Allows columns to grow/shrink, minimum width 300px */
 }
 
 /* --- Typography and Links --- */
@@ -796,7 +796,6 @@ font-family: "Montserrat", sans-serif;
 
     .footer-column {
         margin-bottom: 20px;
-        flex: -1 1 300px;
     }
 
     .footer-column.company-info {
